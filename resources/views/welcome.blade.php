@@ -23,7 +23,7 @@
             <section class="sidebar">
                 <ul class="sidebar-menu">
                     <li><a href="/articulo">Productos</a></li>
-                    <li><a href="/articulo">Categorias</a></li>
+                    <li><a href="/categorias">Categorias</a></li>
                     <li><a href="/articulo">Clientes</a></li>
                     <li><a href="/Factura">Factura</a></li>
                 </ul>

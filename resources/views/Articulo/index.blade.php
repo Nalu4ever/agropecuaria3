@@ -17,23 +17,19 @@
     <table class="table">
       <thead class="bg-primary text-light">
         <tr>
-          <th>Id</th>
-          <th>Cantidad</th>
           <th>Articulo</th>
+          <th>Cantidad</th>
           <th>Precio</th>
         </tr>
       </thead>
-      @foreach ($data as $a )
-      <tr>
-        <td>{{$a->$articulo_nombre}}</td>
-        <td></td>
-        <td></td>
-      </tr>
-
-      @endforeach
-
+      <tbody>
+        @foreach ( $articulo as $article )
+        <tr>
+            <td>{{$article ->articulo_nombre}}</td>
+        </tr>
+        @endforeach
+      </tbody>
     </table>
   </div>
 </body>
-
 </html>

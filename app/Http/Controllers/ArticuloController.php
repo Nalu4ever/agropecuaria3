@@ -6,6 +6,7 @@ use App\Models\Articulo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class ArticuloController extends Controller
 {
     /**
@@ -15,6 +16,7 @@ class ArticuloController extends Controller
      */
     public function index()
     {
+        $articulo = Articulo::paginate(10);
         return view('Articulo\Index');
     }
 
@@ -36,11 +38,11 @@ class ArticuloController extends Controller
      */
     public function store(Request $request)
     {
-        $data = request();
+        $articulo = request();
         DB::table('articulos')->insert([
-            'articulo_nombre' => $data['articulo_nombre'],
-            'cantidad' => $data['cantidad'],
-            'precio' => $data['precio']
+            'articulo_nombre' => $articulo['articulo_nombre'],
+            'cantidad' => $articulo['cantidad'],
+            'precio' => $articulo['precio']
         ]);
         return view('Articulo.index');
     }
@@ -53,7 +55,7 @@ class ArticuloController extends Controller
      */
     public function show(Articulo $articulo)
     {
-        
+
     }
 
     /**

@@ -32,7 +32,4 @@ Route::get('/home', [HomeController::class, 'index']);
 
 Route::get('/logout', [LogoutController::class, 'logout']);
 
-Route::get('/articulo/create', [ArticuloController::class, 'create']);
-Route::get('/articulo', [ArticuloController::class, 'index']);
-Route::post('/articulo', [ArticuloController::class, 'store']);
-Route::get();
+Route::resource('/categorias',App\Http\Controllers\CategoriaController::class);
