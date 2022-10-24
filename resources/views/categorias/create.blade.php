@@ -1,16 +1,13 @@
 @extends('layouts.master')
 @section('content')
-<div class="container-fluid">
-    <h3 class="text-center text-success">Crear Categoria</h3>
-	<form action="{{route('categorias.store')}}" class="form" method="POST">
-		@csrf
-		<div class="register-top-grid">
-			<div>
-				<span>Nombre Categoria</span>
-				<input type="text" class="form-control" name="name" value="{{old('name')}}">
-			</div>
-		</div>
-        <button class="btn save-btn">Guardar</button>
-	</form>
-</div>
+    <div class="categories-container">
+        <form action="{{route('categorias.store')}}" class="categorie-form" method="POST">
+            @csrf
+            <label for="name" class="category-label label">Nombre categoria*</label>
+            <input type="text" class="input input-category" name="name" placeholder="Ingresar nombre de categoria" value="{{old('name')}}">
+            <button class="btn send-btn">
+                Agregar
+            </button>
+        </form>
+    </div>
 @endsection

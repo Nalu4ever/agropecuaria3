@@ -1,17 +1,14 @@
 @extends('layouts.master')
 @section('content')
-<div class="container-fluid">
-    <h3 class="text-center text-success">Crear Categoria</h3>
-	<form action="{{route('categorias.update',$categoria)}}" class="form" method="POST">
-		@csrf
-        @method('put')
-		<div class="register-top-grid">
-			<div>
-				<span>Nombre Categoria</span>
-				<input type="text" class="form-control" name="name" value="{{$categoria->nombre_categoria}}">
-			</div>
-		</div>
-        <button class="btn save-btn">Actualizar</button>
-	</form>
-</div>
+    <div class="categories-container">
+        <form action="{{route('categorias.update', $categoria)}}" class="categorie-form" method="POST">
+            @csrf
+            @method('put')
+            <label for="name" class="category-label label">Nombre categoria*</label>
+            <input type="text" class="input input-category" name="name" placeholder="Ingresar nombre de categoria" value="{{$categoria->nombre_categoria}}">
+            <button class="btn send-btn">
+                Actualizar
+            </button>
+        </form>
+    </div>
 @endsection

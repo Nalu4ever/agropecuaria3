@@ -87,10 +87,10 @@ class CategoriaController extends Controller
             $request->validated();
             $categoria -> nombre_categoria = $request-> name;
             $categoria->save();
-            return redirect()->back()
+            return redirect()->route('categorias.index')
             -> withadd('Categoria Creada');
         } catch (Exception $e) {
-            return redirect()->back()
+            return redirect()->route('categorias.index')
             -> withadd('Hay un error');
         }
     }
