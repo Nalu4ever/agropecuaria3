@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ArticuloRequest extends FormRequest
+class FacturaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class ArticuloRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,8 @@ class ArticuloRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'client'=>['required','min:2','max:233'],
+            'date'=>['required','min:3','max:244']
         ];
     }
 }

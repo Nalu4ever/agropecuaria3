@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\ArticuloController;
+use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
@@ -33,3 +34,15 @@ Route::get('/home', [HomeController::class, 'index']);
 Route::get('/logout', [LogoutController::class, 'logout']);
 
 Route::resource('/categorias',App\Http\Controllers\CategoriaController::class);
+Route::resource('/productos',App\Http\Controllers\ProductoController::class);
+Route::resource('/facturation',App\Http\Controllers\FacturaController::class);
+
+
+
+Route::post('/facturation/add/product', [App\Http\Controllers\FacturacionController::class, 'addProductToVent'])->name('addProduct');
+Route::get('/facturation/get/product', [App\Http\Controllers\FacturacionController::class, 'index'])->name('getAddProduct');
+
+Route::delete('/facturation/cancel/vent', [App\Http\Controllers\FacturacionController::class, 'cancelVent'])->name('cancelVent');
+Route::delete('/facturation/product/delete', [App\Http\Controllers\FacturacionController::class, 'deleteProductToVent'])->name('deleteProductToVent');
+Route::get('/factura', [App\Http\Controllers\FacturacionController::class, 'view'])->name('factura');
+Route::get('/factura/generateReport', [App\Http\Controllers\FacturaController::class, 'generateReport'])->name('generateReport');

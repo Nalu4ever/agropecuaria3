@@ -123,6 +123,7 @@ body{
     font-size: 14px;
     gap: 10px;
 }
+/*vistas*/
 
 .category-content__bottom {
     display: flex;
@@ -148,7 +149,7 @@ body{
 .categorie-form {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 20%;
     gap: 10px;
 }
 
@@ -159,7 +160,7 @@ body{
 }
 
 .input-category {
-    height: 43px;
+    height: 20px;
 }
 
 .send-btn {
@@ -199,3 +200,4 @@ body{
     justify-content: center;
     gap: 20px;
 }
+/*welcome*/

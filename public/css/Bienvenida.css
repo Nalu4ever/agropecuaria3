@@ -1,0 +1,199 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: #b9ff82;
+
+
+ }
+  nav {
+      background-color: b9ff82;
+      display: grid;
+      place-items: center;
+
+  }
+
+  nav ul {
+      list-style:none;
+      font-size: 30px;
+      align-content: center;
+      justify-content: center;
+      display:inline-block;
+  }
+
+  nav ul a {
+      display: inline-block;
+      padding: 10px;
+      text-decoration: none;
+      color:#b9ff82 ;
+      transition: 0.2 ease-in;
+      font-size: 20px;
+  }
+
+  .aboutus{
+      padding-left: 20rem;
+  }
+
+  footer{
+   background-color:darkgreen;
+   width: 100%;
+   color:#b9ff82;
+  }
+
+  .items{
+      padding: 30px 20px;
+      display: grid;
+      grid-column-gap: 20px;
+      grid-row-gap: 30px;
+      grid-template-columns: repeat(3, 1fr)
+  }
+
+  .item img{
+          width: 85%;
+          height: 350px;
+          object-fit: cover;
+          cursor:pointer;
+          transition: 0.2s ease;
+  }
+
+  .item img:hover{
+      transform: scale(1.04);
+  }
+
+  .item h4{
+      padding: 5px;
+      text-align:center;
+      font-family: sans-serif;
+  }
+  .btn-login, .btn-register{
+      border: 3px solid rgba(100,100,100, 0.1);
+      margin-left: 80px;
+      margin-bottom: 10px;
+      padding: 10px;
+      width: 130px;
+      font-family: 'Poppins',sans-serif;
+      font-size: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      color: black;
+      background-size: 200%;
+      background-image: linear-gradient(to left,#b9ff82 ,#00ff00);
+      transition: 0.2s ease;
+      font-style:inherit;
+  }
+
+  .btn-login:hover, .btn-register:hover{
+      background-color: #b9ff82;
+      box-shadow: 0 0 10px  #b9ff82,0 0 40px #b9ff82, 0 0 80px #b9ff82 ;
+      transition-delay: 0.2s;
+  }
+
+
+  .separator {
+    /* Content is centered horizontally */
+    align-items: center;
+    display: flex;
+
+    /* Used to set the position of text */
+    position: relative;
+}
+
+.separator__content {
+    /* We won't see the separator line */
+    background: #fff;
+
+    /* Displayed at the center of separator */
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Spacing */
+    padding: 0 0.25rem;
+
+    /* Demo */
+    width: 60%;
+    border-radius: 5rem;
+}
+
+.separator__separator {
+    border-bottom: 1px solid black;
+    height: 1px;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: yellowgreen;
+    display: grid;
+    place-items: center;
+}
+
+.sidebar .sidebar-menu {
+    list-style: none;
+
+}
+
+.sidebar .sidebar-menu a {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.2 ease-in;
+    font-size: 18px;
+
+}
+
+.sidebar .sidebar-menu a:hover {
+    background-color: green;
+    color: white;
+}
+
+.user {
+    position: absolute;
+    font-style: oblique;
+    padding-left: 68rem;
+    margin-top: -40px;
+    font-size: 18px;
+}
+
+.close {
+    position: absolute;
+    margin-left: 68rem;
+    margin-top: 20px;
+    background: #fc0000;
+    background-image: -webkit-linear-gradient(top, #fc0000, #c71c1c);
+    background-image: -moz-linear-gradient(top, #fc0000, #c71c1c);
+    background-image: -ms-linear-gradient(top, #fc0000, #c71c1c);
+    background-image: -o-linear-gradient(top, #fc0000, #c71c1c);
+    background-image: linear-gradient(to bottom, #fc0000, #c71c1c);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+
+    padding: 8px 12px 8px 12px;
+    text-decoration: none;
+    border-color: #E2201C;
+}
+
+.close:hover {
+    background: #ff4545;
+    background-image: -webkit-linear-gradient(top, #ff4545, #fc0808);
+    background-image: -moz-linear-gradient(top, #ff4545, #fc0808);
+    background-image: -ms-linear-gradient(top, #ff4545, #fc0808);
+    background-image: -o-linear-gradient(top, #ff4545, #fc0808);
+    background-image: linear-gradient(to bottom, #ff4545, #fc0808);
+    text-decoration: none;
+}
+
+.a{
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.algo{
+    background-color: darkgreen;
+    color: white;
+}
+

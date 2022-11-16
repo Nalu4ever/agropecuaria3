@@ -10,32 +10,32 @@
 </head>
 
 <body>
-  <div class="form-container">
-    <div class="form-container__center">
-      <h1 class="form-title">Iniciar Sesion</h1>
-      <form action="/login" method="POST" class="form-content login-form">
-        @csrf
-        <label class="input-label">
-          <input class="input login-input" type="text" name="user_name" placeholder=" " autocomplete="off">
-          <span class="placeholder-span">Ingrese usuario</span>
-        </label>
-        <label class="input-label">
-          <input class="input login-input" type="password" name="password" placeholder=" " autocomplete="off">
-          <span class="placeholder-span">Contraseña</span>
-        </label>
-        <button class="btn-submit">
-          <span class="btn-title">
-            Iniciar
-          </span>
-        </button>
-        <a href="/register" class="btn-second">
-          <span class="second-btn__title">
-            Registrarse
-          </span>
-        </a>
-      </form>
+    <div class="form-container">
+        <div class="form-container__center">
+            <h1 class="form-title">Iniciar Sesion</h1>
+            <form action="/login" method="POST" class="form-content login-form">
+                @csrf
+                <label class="input-label">
+                    <input class="input login-input" type="text" name="user_name" placeholder=" " autocomplete="off">
+                    <span class="placeholder-span">Ingrese usuario</span>
+                </label>
+                <label class="input-label">
+                    <input class="input login-input" type="password" name="password" placeholder=" " autocomplete="off">
+                    <span class="placeholder-span">Contraseña</span>
+                </label>
+                <button class="btn-submit">
+                    <span class="btn-title">
+                        Iniciar
+                    </span>
+                </button>
+                <a href="/register" class="btn-second">
+                    <span class="second-btn__title">
+                        Registrarse
+                    </span>
+                </a>
+            </form>
+        </div>
     </div>
-  </div>
 </body>
 
 </html>

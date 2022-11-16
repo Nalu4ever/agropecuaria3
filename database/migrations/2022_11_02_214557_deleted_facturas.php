@@ -13,14 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('productos', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre_producto');
-            $table->double('precio_producto');
-            $table->unsignedBigInteger('fk_categories')->nullable();
-
-            $table->foreign('fk_categories')->references('id')->on('categorias')->onDelete('cascade');
-            $table->timestamps();
+        Schema::table('productos', function (Blueprint $table) {
+            //
+            $table->softDeletes();
         });
     }
 
@@ -31,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('articulos', function (Blueprint $table) {
+            //
+        });
     }
 };

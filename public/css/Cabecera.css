@@ -1,0 +1,38 @@
+.logo1{
+    inline-size: 5rem;
+    padding-right: 75rem;
+}
+.algo1{
+    position: absolute;
+    font-size: 50px;
+    background-color: #b9ff82;
+    height: auto;
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 23ch;
+    margin-left: 100px;
+    color: darkgreen;
+
+    animation: typing 5s steps(20),
+        blink 35s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/*svg{
+    width: 450px;
+}*/
+
